@@ -1,11 +1,13 @@
 import sqlite3 from "sqlite3";
 import * as sqlite from "sqlite";
 
+export const dbPromise = sqlite.open({
+  filename: "memory.db",
+  driver: sqlite3.Database
+});
+
 export async function initDB() {
-  const db = await sqlite.open({
-    filename: "memory.db",
-    driver: sqlite3.Database
-  });
+   const db = await dbPromise;
 
   await db.exec(`
     CREATE TABLE IF NOT EXISTS memory (

@@ -1,4 +1,4 @@
- Invoice Memory Agent
+Invoice Memory Agent
 Purpose
 
 This project implements a memory-based learning layer for invoice processing.
@@ -46,6 +46,7 @@ Memory persists across runs
 The database file (memory.db) is ignored from Git
 
 Folder Structure
+
 src/
 ├── db/
 │   └── sqlite.ts        # SQLite setup and schema
@@ -68,29 +69,23 @@ Output
 
 For each invoice, the system returns:
 
-normalized invoice
-
-proposed corrections
-
-human review decision
-
-reasoning
-
-confidence score
-
-audit trail
+-normalized invoice
+-proposed corrections
+-human review decision
+-reasoning
+-confidence score
+-audit trail
 
 Tech Stack
 
-TypeScript (strict)
-
-Node.js
-
-SQLite
+1.TypeScript (strict)
+2.Node.js
+3.SQLite
 
 No external AI or agent frameworks are used.
 
 How to Run
+
 npm install
 npm run dev
 

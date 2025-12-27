@@ -22,7 +22,7 @@ export function applyMemory(
 
   for (const memory of memories) {
    
-    // Case 1: Supplier GmbH - serviceDate from Leistungsdatum
+    // Case 1: Supplier GmbH  serviceDate from Leistungsdatum
  
     if (
       memory.rule.includes("Leistungsdatum") &&
@@ -47,7 +47,7 @@ export function applyMemory(
       }
     }
     
-    // Case 2: Parts AG - recover missing currency
+    // Case 2: Parts AG  recover missing currency
 
     if (
       memory.rule.includes("Currency appears in rawText") &&
